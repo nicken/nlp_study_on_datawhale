@@ -1,3 +1,13 @@
+# 不上传自己收集到的学习资料，主要是github库
 */info
-task_1/data
+
+# 为使上传速度加快，不上传数据集，有需要请Email：l814141063@outlook.comm
+*/data
+
+# 为使上传速度加快，不上传训练好的模型
+*/model
+
+# 其他
 !.gitignore
+.vscode
+.idea
