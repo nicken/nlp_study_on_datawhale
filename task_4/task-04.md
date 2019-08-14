@@ -25,10 +25,14 @@ task-04
 > 我们称 ![[公式]](https://www.zhihu.com/equation?tex=%28f%2Ag%29%28n%29) 为 ![[公式]](https://www.zhihu.com/equation?tex=f%2Cg) 的卷积
 >
 > 其连续的定义为：
+>
+> 
 > $$
 > (f * g)(n)=\int_{-\infty}^{\infty} f(\tau) g(n-\tau) d \tau
 > $$
 > 其离散的定义为：
+>
+> 
 > $$
 > (f * g)(n)=\sum_{\tau=-\infty}^{\infty} f(\tau) g(n-\tau)
 > $$
@@ -202,6 +206,8 @@ $$
 | :-----------------------------------------: | :------------------------------------------: |
 | <img width="250px" src="md_images/1-9.gif"> | <img width="250px" src="md_images/1-10.gif"> |
 |                     d=1                     |                     d=2                      |
+
+
   m表示卷积核大小，p 表示零填充大小（zero-padding）， s 表示步长（stride），d表示膨胀率（dilation）。
 
 
@@ -245,12 +251,16 @@ $$
 #### 2.2.1 最大池化
 
 > 最大汇聚（Maximum Pooling）：一般是取一个区域内所有神经元的最大值。
+>
 > $$
 > Y_{m, n}^{d}=\max _{i \in R_{m, n}^{d}} x_{i}
 > $$
+>
 > 其中$x_i$ 为区域$ R_{m, n}^{d}$内每个神经元的激活值。
 >
 > ---参考[2]
+
+> 参考[2] 中， 将`池化`称为`汇聚`,下同。
 
 如图所示[3]：
 
@@ -261,12 +271,16 @@ $$
 #### 2.2.2 平均池化
 
 > 平均汇聚（Mean Pooling）：一般是取区域内所有神经元的平均值。
+> 
 > $$
 > Y_{m, n}^{d}=\frac{1}{\left|R_{m, n}^{d}\right|} \sum_{i \in R_{m, n}^{d}} x_{i}
 > $$
+> 
 > 其中$\left|R_{m, n}^{d}\right|$为区域内神经元个数
 >
 > ---参考[2]
+
+
 
 如图所示[3]：
 
