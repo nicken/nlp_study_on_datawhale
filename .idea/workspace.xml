@@ -2,16 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea208f1-4afe-4a78-8a89-538a82b19aa9" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/task_3/fastext_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_3/fasttext_case_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_3/mlp_tensorflow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_4/TextCNN-Tensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_4/textcnn_case_2_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_4/textcnn_case_2_train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_4/textcnn_case_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nlp_task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nlp_task.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-3_basic_distance_measurement_in_text_mining.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-3_basic_distance_measurement_in_text_mining.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-bag_of_words.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-bag_of_words.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_4/md_images/1-1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_4/md_images/1-11.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_4/md_images/1-12.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_4/md_images/1-2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_4/md_images/1-5.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_4/md_images/1-6.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_4/task-04.md" beforeDir="false" afterPath="$PROJECT_DIR$/task_4/task-04.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +26,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task_4/textCNN.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,6 +50,8 @@
       <find>kr</find>
       <find>build_vocab</find>
       <find>mapper</find>
+      <find>sqrt</find>
+      <find>summary</find>
     </findStrings>
     <replaceStrings>
       <replace>#</replace>
@@ -58,6 +72,11 @@
         <option value="$PROJECT_DIR$/task_3/fastext_case.py" />
         <option value="$PROJECT_DIR$/task_3/fasttext_case_2.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/task_4/2-1.TextCNN/TextCNN-Tensor.py" />
+        <option value="$PROJECT_DIR$/task_4/textcnn_case_2.py" />
+        <option value="$PROJECT_DIR$/task_4/textcnn_case_2_train.py" />
+        <option value="$PROJECT_DIR$/task_4/info/NLP-Project-master/text_classifier/trainers/train.py" />
+        <option value="$PROJECT_DIR$/task_4/textcnn_case_3.py" />
       </list>
     </option>
   </component>
@@ -83,7 +102,7 @@
             <path>
               <item name="nlp_task" type="b2602c69:ProjectViewProjectNode" />
               <item name="nlp_task" type="462c0819:PsiDirectoryNode" />
-              <item name="task_3" type="462c0819:PsiDirectoryNode" />
+              <item name="task_4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -97,7 +116,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -189,16 +208,21 @@
       <workItem from="1565503627942" duration="1040000" />
       <workItem from="1565512108838" duration="1160000" />
       <workItem from="1565601629864" duration="6081000" />
+      <workItem from="1565702711828" duration="721000" />
+      <workItem from="1565745417155" duration="2766000" />
+      <workItem from="1565749262029" duration="1246000" />
+      <workItem from="1565751435640" duration="175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22960000" />
+    <option name="totallyTimeSpent" value="27868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16845493" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12982832" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -212,9 +236,10 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="调试" order="11" />
+      <window_info anchor="bottom" id="调试" order="11" weight="0.32939914" />
       <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="bottom" id="Python Console" order="13" visible="true" weight="0.30793992" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.03218884" />
+      <window_info anchor="bottom" id="Jupyter" order="14" weight="0.32939914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -298,9 +323,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task_3/fasttext_case_1.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/task_3/fasttext_case_1.ipynb" />
     <entry file="file://$PROJECT_DIR$/../nlp_env/lib/python3.6/site-packages/fasttext/FastText.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -332,5 +355,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/2-1.TextCNN/TextCNN-Tensor.py" />
+    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_2_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_2_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2059">
+          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/info/NLP-Project-master/text_classifier/trainers/train.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/info/NLP-Project-master/text_classifier/trainers/train_base.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/info/NLP-Project-master/text_classifier/trainers/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3272">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/info/NLP-Project-master/text_classifier/predictors/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2112">
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/info/NLP-Project-master/text_classifier/models/textcnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#341#427#0" />
+            <element signature="e#461#581#0" />
+            <element signature="e#1572#6769#0" />
+            <element signature="e#6856#7259#0" />
+            <element signature="e#7385#11501#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/textCNN.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -7,6 +7,9 @@
 # 为使上传速度加快，不上传训练好的模型
 */model
 
+# 为加快上传，不上传训练好后产生的关于tensorboard数据
+*/summarys
+
 # 其他
 !.gitignore
 .vscode

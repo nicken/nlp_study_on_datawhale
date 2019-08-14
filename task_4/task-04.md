@@ -309,7 +309,89 @@ $$
 
 
 
-## 3. Text-CNN的原理。
+## 3. Text-CNN的原理
+
+> 用 CNN 来提取句子中类似 n-gram 的关键信息.
+
+
+
+> ## 简介
+>
+> TextCNN 是利用卷积神经网络对文本进行分类的算法，由 Yoon Kim 于2014年在 “Convolutional Neural Networks for Sentence Classification” 一文中提出的算法。
+>
+> ## 原理图
+>
+> ![](md_images/3-1.png)
+>
+> 
+>
+> ![](md_images/3-2.png)
+>
+> ## 结构详解
+>
+> ### 第一层
+>
+> 第一层是输入的7*5的词向量矩阵，词向量的维度为5，共7个单词。
+>
+> ### 第二层
+>
+> 第二层是卷积层，共有6个卷积核，尺寸为2×5、3*5、4×5，每个尺寸各2个，输入层分别与6个卷积核进行卷积操作，再使用激活函数激活，每个卷积核都得到了对应的feature maps。
+>
+> ### 第三层
+>
+> 第三层是池化层，使用1-max pooling提取出每个feature map的最大值，然后进行级联，得到6维的特征表示。
+>
+> ### 第四层
+>
+> 第四层是输出层，输出层使用softmax激活函数进行分类，在这层可以进行正则化操作（l2-regulariation）。
+>
+> ## 细节介绍
+>
+> ### feature
+>
+> 这里的特征就是词向量，词向量有静态和非静态的，静态的可以使用pre-train的，非静态的则可以在训练过程中进行更新，一般推荐非静态的fine-tunning方式，即以pre-train的词向量进行初始化，然后在训练过程中进行调整，它能加速收敛。
+>
+> ### channel
+>
+> 图像中可以利用 (R, G, B) 作为不同channel，而文本的输入的channel通常是不同方式的embedding方式（比如 word2vec或Glove），实践中也有利用静态词向量和fine-tunning词向量作为不同channel的做法。
+>
+> ### conv-1d
+>
+> 在TextCNN中用的是一维卷积（conv-1d），一维卷积带来的问题是需要设计通过不同size的filter获取不同宽度的视野。
+>
+> ### 1-max pooling
+>
+> 在TextCNN中用的是1-max pooling，当然也可以使用(dynamic) k-max pooling，在pooling阶段保留 k 个最大值，保留全局信息。
+>
+> ## 参数设置
+>
+> - 序列长度：一般设置为最大句子的长度
+> - 类别数量：预测的类别的数量
+> - 字典大小：即词汇数量
+> - 嵌入长度：即每个词表示的词向量长度，训练词向量可以使用
+> - word2cec、fasttext、glove等工具
+> - 卷积核大小：对应n元语法的概念
+> - 卷积核个数：卷积核大小对应的卷积核个数
+
+
+
+参考：
+
+> [1] [TextCNN详解](https://www.fashici.com/tech/190.html)
+
+
+
+
+
+## 4. 利用Text-CNN模型来进行文本分类。
+
+
+
+[Code_1](TextCNN-Tensor.py): 简单案例，数据量极少，代码简单；tensorlfow[2]
+
+Code_2([Modle](textcnn_case_2_model.py)、[Train](textcnn_case_2_train.py)): 代码文件较为工程化，比较正式，含有一定的备注[1]
+
+[Code_3](textCNN.ipynb): 较为多详细的说明。[3] [4]
 
 
 
@@ -317,10 +399,32 @@ $$
 
 
 
+模型经验
+
+> 在工作用到TextCNN做query推荐，并结合先关的文献，谈几点经验： 
+> 1、TextCNN是一个n-gram特征提取器，对于训练集中没有的n-gram不能很好的提取。对于有些n-gram，可能过于强烈，反而会干扰模型，造成误分类。 
+> 2、TextCNN对词语的顺序不敏感，在query推荐中，我把正样本分词后得到的term做随机排序，正确率并没有降低太多，当然，其中一方面的原因短query本身对term的顺序要求不敏感。隔壁组有用textcnn做博彩网页识别，正确率接近95%，在对网页内容（长文本）做随机排序后，正确率大概是85%。 
+> 3、TextCNN擅长长本文分类，在这一方面可以做到很高正确率。 
+>
+> 4、TextCNN在模型结构方面有很多参数可调，具体参看文末的文献。
+>
+> ---参考[1]
 
 
 
 
 
+参考
 
-## 4. 利用Text-CNN模型来进行文本分类。 
+> [1] [大规模文本分类网络TextCNN介绍](https://blog.csdn.net/u012762419/article/details/79561441)
+>
+> [2] [graykode/nlp-tutorial](https://github.com/graykode/nlp-tutorial)
+>
+> [3] [文本分类实战（二）—— textCNN 模型](https://www.cnblogs.com/jiangxinyang/p/10207482.html)
+>
+> [4] [jiangxinyang227/textClassifier](https://github.com/jiangxinyang227/textClassifier)
+
+
+
+
+
