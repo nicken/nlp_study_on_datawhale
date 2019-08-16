@@ -113,4 +113,56 @@
 《NLP理论基础和实践(进阶) 第八期》，建议大家收藏一下链接
 
 
+【Task5 (2天)】
+  循环和递归神经网络
+ 
+【任务链接】 
+[https://shimo.im/docs/yRprK389qcwphGWy/](https://shimo.im/docs/yRprK389qcwphGWy/) 
 
+【Deadline】
+  2019.8.16 晚9:00 ，大家自行设置好闹钟
+
+【打卡方式】
+  对应自己的编号附上github/csdn链接+提一个问题
+  [https://shimo.im/sheets/VThWCcGyhxPwV3rx/](https://shimo.im/sheets/VThWCcGyhxPwV3rx/) 《NLP进阶第八期打卡》 
+
+【通知归档】
+  所有学习安排资料分享注意事项等已归档，可至石墨文档查看
+  [https://shimo.im/docs/WxDx9YvcCxpWV86X/](https://shimo.im/docs/WxDx9YvcCxpWV86X/)
+《NLP理论基础和实践(进阶) 第八期》，建议大家收藏一下链接
+
+【Task6 (3天)】
+  Attention原理
+ 
+【任务链接】 
+  [https://shimo.im/docs/T3JcjGqRv338ttQt/](https://shimo.im/docs/T3JcjGqRv338ttQt/) 
+
+【Deadline】
+  2019.8.19 晚9:00 ，大家自行设置好闹钟
+
+【打卡方式】
+  对应自己的编号附上github/csdn链接+提一个问题
+  [https://shimo.im/sheets/VThWCcGyhxPwV3rx/](https://shimo.im/sheets/VThWCcGyhxPwV3rx/) 《NLP进阶第八期打卡》 
+
+【通知归档】
+  所有学习安排资料分享注意事项等已归档，可至石墨文档查看
+  [https://shimo.im/docs/WxDx9YvcCxpWV86X/](https://shimo.im/docs/WxDx9YvcCxpWV86X/)
+《NLP理论基础和实践(进阶) 第八期》，建议大家收藏一下链接
+
+【Task7 (3天)】 
+  BERT
+
+【任务链接】 
+  [https://shimo.im/docs/YTCgK9tPC9wRrcKP/](https://shimo.im/docs/YTCgK9tPC9wRrcKP/)
+
+【Deadline】
+  2019.8.22 晚9:00 ，大家自行设置好闹钟
+
+【打卡方式】
+  对应自己的编号附上github/csdn链接+提一个问题
+  [https://shimo.im/sheets/VThWCcGyhxPwV3rx/](https://shimo.im/sheets/VThWCcGyhxPwV3rx/) 《NLP进阶第八期打卡》 
+
+【通知归档】
+  所有学习安排资料分享注意事项等已归档，可至石墨文档查看
+  [https://shimo.im/docs/WxDx9YvcCxpWV86X/](https://shimo.im/docs/WxDx9YvcCxpWV86X/)
+《NLP理论基础和实践(进阶) 第八期》，建议大家收藏一下链接
