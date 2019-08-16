@@ -613,11 +613,13 @@ RNN、LSTM的记忆力还是太弱了，需要一个记忆力更强的模型；
 
 [Code_1](TextRNN-Tensor.py)
 
-
+[Code_2](run_rnn.py)
 
 7-8参考
 
 > [1] [graykode/nlp-tutorial](https://github.com/graykode/nlp-tutorial)
+>
+> [2] [gaussic/text-classification-cnn-rnn](https://github.com/gaussic/text-classification-cnn-rnn)
 
 
 
