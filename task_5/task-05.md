@@ -601,11 +601,23 @@ RNN、LSTM的记忆力还是太弱了，需要一个记忆力更强的模型；
 
 
 
+> 即为RNN原理
+
+
+
 
 
 ## 8. 利用Text-RNN模型来进行文本分类。
 
 
+
+[Code_1](TextRNN-Tensor.py)
+
+
+
+7-8参考
+
+> [1] [graykode/nlp-tutorial](https://github.com/graykode/nlp-tutorial)
 
 
 
@@ -643,12 +655,18 @@ RNN、LSTM的记忆力还是太弱了，需要一个记忆力更强的模型；
 
 
 
-暂无
+[Code](RCNN.ipynb)
 
 
+
+
+
+9-10参考
 
 > [1] [Recurrent Convolutional Neural Networks for Text Classification](https://mp.weixin.qq.com/s/1iUs0aFcMw3gtt6slPXBKQ)
 >
 > [2] Siwei Lai, Liheng Xu, Kang Liu, Jun Zhao, Recurrent Convolutional Neural Networks for Text Classification, AAAI,2016
 >
 > [3] [论文笔记：Recurrent Convolutional Neural Networks for Text Classification](https://blog.csdn.net/vivian_ll/article/details/80975135)
+>
+> [4] [jiangxinyang227/textClassifier](https://github.com/jiangxinyang227/textClassifier)
