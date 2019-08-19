@@ -387,8 +387,17 @@ word2vec是用一个一层的神经网络(即CBOW)把one-hot形式的稀疏词�
 
 
 
+参考：
+
+> [1] [word2vec 中的数学原理详解](https://www.cnblogs.com/peghoty/p/3857839.html)
+
 
 
 ## 5.word2vec原理推导与代码分析 [ ](http://www.hankcs.com/nlp/word2vec.html)[word2vec2](http://www.hankcs.com/nlp/word2vec.html)
 
 后补充；
+
+
+
+
+
