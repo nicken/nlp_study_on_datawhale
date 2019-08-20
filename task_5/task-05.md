@@ -601,7 +601,7 @@ RNN、LSTM的记忆力还是太弱了，需要一个记忆力更强的模型；
 
 
 
-> 即为RNN原理
+> 即为RNN原理 
 
 
 
@@ -611,15 +611,184 @@ RNN、LSTM的记忆力还是太弱了，需要一个记忆力更强的模型；
 
 
 
+
+
+### 8.1 关于tensorflow中相关代码的理解
+
+
+
+#### 8.1.1 `tf.nn.rnn_cell.LSTMCell`
+
+> 创建一个LSTM单元，相当于告诉tensorflow，我要使用LSTM单元啦；
+>
+> 由于在RNN的单元个数，由输入长度决定的，故而也就没有要用多少个`LSTMcell`
+>
+> > **Warning:** THIS FUNCTION IS DEPRECATED. It will be removed in a future version. Instructions for updating: This class is equivalent as `tf.keras.layers.LSTMCell`, and will be replaced by that in Tensorflow 2.0. 
+
+
+
+但有一个需要注意的是，参数`num_units`，这个指的是，LSTM内部的隐藏层有多少个单元;
+
+还句话说，LSTM单元的输出是多少维的；
+
+> 假设在我们的训练数据中，每一个样本 x 是 28*28 维的一个矩阵，那么将这个样本的每一行当成一个输入，通过28个时间步骤展开LSTM，在每一个LSTM单元，我们输入一行维度为28的向量，如下图所示。
+>
+> ![img](http://www.mtcnn.com/wp-content/uploads/2018/09/num_units.png)
+>
+> 那么，对每一个LSTM单元，参数 num_units=128 的话，就是每一个单元的输出为 128*1 的向量，在展开的网络维度来看，如下图所示，对于每一个输入28维的向量，LSTM单元都把它映射到128维的维度， 在下一个LSTM单元时，LSTM会接收上一个128维的输出，和新的28维的输入，处理之后再映射成一个新的128维的向量输出，就这么一直处理下去，知道网络中最后一个LSTM单元，输出一个128维的向量。
+>
+> ![img](http://www.mtcnn.com/wp-content/uploads/2018/09/unfold.png)
+>
+> 从LSTM的公式的角度看是什么原理呢？我们先看一下LSTM的结构和公式：
+>
+> ![img](http://www.mtcnn.com/wp-content/uploads/2018/09/lstm-f.png)
+>
+> 参数 num_units=128 的话，
+>
+> 1. 对于公式 (1) ，h=128 \* 1 维， x=28\*1 维，[h,x]便等于156\*1 维，W=128\*156 维，所以 W*[h,x]=128\*156 * 156\*1=128\*1, b=128\*1 维, 所以 f=128\*1+128\*1=128\*1 维；
+> 2. 对于公式 (2) 和 (3)，同上可分析得 i=128\*1 维，C(~)=128\*1 维;
+> 3. 对于公式 (4) ，f(t)=128\*1, C(t-1)=128\*1, f(t) .\* C(t-1) = 128\*1 .\* 128\*1 = 128\*1 , 同理可得 C(t)=128\*1 维;
+> 4. 对于公式 (5) 和 (6) ， 同理可得 O=128\*1 维， h=O.*tanh(C)=128\*1 维。
+>
+> 所以最后LSTM单元输出的h就是 128\*1 的向量。
+>
+> 
+>
+> ---参考[3]
+
+
+
+参数
+
+```python
+__init__(    num_units,    
+      use_peepholes=False, 
+      cell_clip=None,
+      initializer=None, 
+      num_proj=None,
+      proj_clip=None, 
+      num_unit_shards=None,
+      num_proj_shards=None,
+      forget_bias=1.0, 
+      state_is_tuple=True, 
+      activation=None,
+      reuse=None, 
+      name=None, 
+      dtype=None,
+      **kwargs)
+```
+
+
+
+
+
+#### 8.1.2 ` tf.nn.dynamic_rnn`
+
+> 创建了LSTMcell后，就把它放入相应那一层网络中，就是放入 ` tf.nn.dynamic_rnn`中；
+>
+> > **Warning:** THIS FUNCTION IS DEPRECATED. It will be removed in a future version. Instructions for updating: Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+
+
+
+主要的参数为：
+
+`cell`：告诉网络使用什么单元，如`tf.nn.rnn_cell.LSTMCell`，先实例化在给到 ` tf.nn.dynamic_rnn`；
+
+`input`：设置这一层网络的输入；
+
+```python
+cell = tf.nn.rnn_cell.LSTMCell(n_hidden)   
+outputs, states = tf.nn.dynamic_rnn(cell, X, dtype=tf.float32)
+```
+
+
+
+输出说明：
+
+outputs：每一个cell的输出
+
+states: 最后一个cell的输出
+
+备注：其中`batch_size`指的是当前一组数据中有多少个输入（如下图中，有四组输入，每组分对应不同的cell，每个cell每次输入为3维；
+
+
+
+> 一对(outputs, state),其中：
+>
+> outputs： RNN输出Tensor.
+>
+> ​		如果time_major == False(默认),这将是shape为[batch_size, max_time, cell.output_size]的Tensor.
+>
+> ​		如果time_major == True,这将是shape为[max_time, batch_size, cell.output_size]的Tensor.
+>
+> state： 最终的状态.
+>
+> ​		一般情况下state的形状为 [batch_size, cell.output_size ]
+> 如果cell是LSTMCells,则state将是包含每个单元格的LSTMStateTuple的元组，state的形状为[2，batch_size, cell.output_size ]
+>
+> 
+>
+> 单层：
+>
+> <img src="md_images/7-1.png" width=600>
+>
+> 多层：
+>
+> <img src="md_images/7-2.png" width=600>
+>
+> ---参考[6] (更多详细说明可见此)
+
+
+
+
+
+
+
+参数
+
+```python
+tf.nn.dynamic_rnn(
+    cell,
+    inputs,
+    sequence_length=None,
+    initial_state=None,
+    dtype=None,
+    parallel_iterations=None,
+    swap_memory=False,
+    time_major=False,
+    scope=None
+)
+```
+
+
+
+
+
+### 8.2 案例代码
+
 [Code_1](TextRNN-Tensor.py)
 
 [Code_2](run_rnn.py)
+
+
+
+
 
 7-8参考
 
 > [1] [graykode/nlp-tutorial](https://github.com/graykode/nlp-tutorial)
 >
 > [2] [gaussic/text-classification-cnn-rnn](https://github.com/gaussic/text-classification-cnn-rnn)
+>
+> [3] [tf.nn.rnn_cell.LSTMCell中num_units参数解释](http://www.mtcnn.com/?p=529)
+>
+> [4] [tf.nn.rnn_cell.LSTMCell](https://tensorflow.google.cn/versions/r1.13/api_docs/python/tf/nn/rnn_cell/LSTMCell)
+>
+> [5] [tf.nn.dynamic_rnn的输出outputs和state含义](https://blog.csdn.net/u010960155/article/details/81707498)
+>
+> [6] [tf.nn.dynamic_rnn返回值详解](https://blog.csdn.net/mch2869253130/article/details/89280203)
+>
+> 
 
 
 
