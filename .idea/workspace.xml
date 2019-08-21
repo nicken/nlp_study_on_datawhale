@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-3_basic_distance_measurement_in_text_mining.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-3_basic_distance_measurement_in_text_mining.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-bag_of_words.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-bag_of_words.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/task-05.md" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/task-05.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +13,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task_7/transformer.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -84,7 +89,7 @@
             <path>
               <item name="nlp_task" type="b2602c69:ProjectViewProjectNode" />
               <item name="nlp_task" type="462c0819:PsiDirectoryNode" />
-              <item name="task_5" type="462c0819:PsiDirectoryNode" />
+              <item name="task_7" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -98,7 +103,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../nlp_object_from_github/text-classification-cnn-rnn-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -196,16 +201,19 @@
       <workItem from="1565751435640" duration="175000" />
       <workItem from="1565785846330" duration="19000" />
       <workItem from="1565959673356" duration="145000" />
+      <workItem from="1566308041728" duration="207000" />
+      <workItem from="1566371296077" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28032000" />
+    <option name="totallyTimeSpent" value="28255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13304721" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1362661" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -409,6 +417,9 @@
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/task_5/RCNN.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_7/transformer.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
   </component>

@@ -10,6 +10,11 @@
 # 为加快上传，不上传训练好后产生的关于tensorboard数据
 */summarys
 
+# 关于task-07
+task_7/BERT/modelParams
+task_7/BERT/blstm_output
+
+
 # 其他
 !.gitignore
 .vscode
