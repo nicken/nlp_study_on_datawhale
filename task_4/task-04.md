@@ -403,7 +403,7 @@ $$
 
 [Code_1](TextCNN-Tensor.py): 简单案例，数据量极少，代码简单；tensorlfow[2]
 
-[Code_2](textCNN.ipynb): 较为多详细的说明。[3] [4]
+[Code_2](textcnn_case_2.py): 较为多详细的说明。[3] [4]
 
 
 
