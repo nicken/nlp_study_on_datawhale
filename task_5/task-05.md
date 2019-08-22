@@ -117,6 +117,18 @@ $$
 
 ### 1.3 RNN优缺点
 
+* RNN的 优点
+
+  可以处理 任意长度 的输入
+  步骤 t 的计算(理论上)可以使用 许多步骤前 的信息
+  模型大小不会 随着输入的增加而**增加**
+  在每个时间步上应用相同的权重，因此在处理输入时具有 对称性
+
+* RNN的 缺点
+
+  递归计算速度慢
+  在实践中，很难从**许多步骤前**返回信息
+
 
 
 
@@ -153,12 +165,6 @@ $$
 <img src="md_images/1-7.png" width=500>
 
 它会从当前时间的损失，一直反向传播到最开始的状态，影响到最开始的节点。
-
-
-
-
-
-
 
 
 
@@ -558,6 +564,8 @@ $$
 > [10] [【深度学习】RNN中梯度消失的解决方案（LSTM）](https://blog.csdn.net/qq_29340857/article/details/70574528)
 >
 > [11] [RNN梯度消失与梯度爆炸的原因](https://zhuanlan.zhihu.com/p/53405950)
+>
+> [12] CS224n，Lecture 06 The probability of a sentence Recurrent Neural Networks and Language Models，2019
 
 
 
