@@ -403,9 +403,7 @@ $$
 
 [Code_1](TextCNN-Tensor.py): 简单案例，数据量极少，代码简单；tensorlfow[2]
 
-Code_2([Modle](textcnn_case_2_model.py)、[Train](textcnn_case_2_train.py)): 代码文件较为工程化，比较正式，含有一定的备注[1]
-
-[Code_3](textCNN.ipynb): 较为多详细的说明。[3] [4]
+[Code_2](textCNN.ipynb): 较为多详细的说明。[3] [4]
 
 
 
@@ -430,7 +428,7 @@ Code_2([Modle](textcnn_case_2_model.py)、[Train](textcnn_case_2_train.py)): 代
 
 参考
 
-> [1] [大规模文本分类网络TextCNN介绍](https://blog.csdn.net/u012762419/article/details/79561441)
+> [1] [大规模文本分类网络TextCNN介绍](https://blog.csdn.net/u012762419/article/details/79561441)---代码文件较为工程化，比较正式，含有一定的备注；但缺乏相关文件，无法直接运行，仅供参考
 >
 > [2] [graykode/nlp-tutorial](https://github.com/graykode/nlp-tutorial)
 >
