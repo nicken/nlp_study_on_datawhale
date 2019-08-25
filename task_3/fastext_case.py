@@ -11,6 +11,9 @@ import fasttext.FastText as fasttext
 import numpy as np
 import os
 
+# 若要整个文件一起转，则文件路径需要把`task_3/data/stopwords.txt'换成‘data/stopwords.txt'，其他以此类推
+# print(os.getcwd())
+
 ### 去停用词
 def clean_txt(raw):
     fil = re.compile(r"[^0-9a-zA-Z\u4e00-\u9fa5]+")

@@ -402,9 +402,53 @@ Made default False in response to CVE-2019-6446.
    AttributeError: 'Metrics' object has no attribute 'on_train_batch_begin'
    ```
 
-   思路：版本不匹配？
+   解决方法：
 
-   暂未解决。
+   由于先后使用了
+   
+   ```python
+   from tensorflow import keras
+   from keras.callbacks import Callback
+   ```
+   
+   而在`Metrics()`中所需的继承的为`tensorflow`的`keras.callbacks.Callback`,
+   
+   将第二行注释掉即可，然后使用`Metrics(keras.callbacks.Callback)`
+   
+   即：
+   
+   ```python
+   from tensorflow import keras
+   # from keras.callbacks import Callback
+   
+   # 中间代码省略
+   
+   class Metrics(keras.callbacks.Callback):
+       # 后续代码省略
+   ```
+   
+   
+   
+2. 解决了上述问题1后，随后遇到一个为`None`的问题
+
+```bash
+14848/15000 [============================>.] - ETA: 0s - loss: 0.6923 - acc: 0.5395Traceback (most recent call last):
+  File "/home/nicken/NLP_study/nlp_env/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 3326, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-3-203d64d6eb42>", line 7, in <module>
+    verbose=1)
+  File "/home/nicken/NLP_study/nlp_env/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 880, in fit
+    validation_steps=validation_steps)
+  File "/home/nicken/NLP_study/nlp_env/lib/python3.6/site-packages/tensorflow/python/keras/engine/training_arrays.py", line 370, in model_iteration
+    callbacks.on_epoch_end(epoch, epoch_logs, mode=mode)
+  File "/home/nicken/NLP_study/nlp_env/lib/python3.6/site-packages/tensorflow/python/keras/callbacks.py", line 251, in on_epoch_end
+    callback.on_epoch_end(epoch, logs)
+  File "<ipython-input-2-5877908e9f60>", line 92, in on_epoch_end
+    val_predict = (np.asarray(self.model.predict(self.validation_data[0]))).round()
+TypeError: 'NoneType' object is not subscriptable
+```
+
+暂未解决
 
 
 

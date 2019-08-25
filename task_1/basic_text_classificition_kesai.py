@@ -6,9 +6,11 @@ from tensorflow import keras
 import matplotlib.pyplot as plt
 # 每一Epochs都进行F1计算
 import numpy as np
-from keras.callbacks import Callback
+# from keras.callbacks import Callback
 from keras.engine.training import Model
 from sklearn.metrics import confusion_matrix, f1_score, precision_score, recall_score
+
+
 
 print(tf.__version__)
 
@@ -29,7 +31,7 @@ len(train_data[0]), len(train_data[1])
 word_index = imdb.get_word_index()
 
 # The first indices are reserved
-word_index = {k: (v+3) for k, v in word_index.items()}
+word_index = {k: (v + 3) for k, v in word_index.items()}
 word_index["<PAD>"] = 0
 word_index["<START>"] = 1
 word_index["<UNK>"] = 2  # unknown
@@ -60,7 +62,6 @@ test_data = keras.preprocessing.sequence.pad_sequences(test_data,
 len(train_data[0]), len(train_data[1])
 print(train_data[0])  # 已填充后的
 
-
 # input shape is the vocabulary count used for the movie reviews (10,000 words)
 vocab_size = 15000
 
@@ -84,7 +85,7 @@ y_val = train_labels[:10000]
 partial_y_train = train_labels[10000:]
 
 
-class Metrics(Callback):
+class Metrics(keras.callbacks.Callback):
     def on_train_begin(self, logs={}):
         self.val_f1s = []
         self.val_recalls = []
@@ -103,17 +104,17 @@ class Metrics(Callback):
         return
 
 
+
 metrics = Metrics()
 
-
-earlystopping=keras.callbacks.EarlyStopping(monitor='val_acc', patience=8, verbose=0, mode='max')
+earlystopping = keras.callbacks.EarlyStopping(monitor='val_acc', patience=8, verbose=0, mode='max')
 
 history = model.fit(partial_x_train,
                     partial_y_train,
                     epochs=90,
                     batch_size=512,
                     validation_data=(x_val, y_val),
-                    callbacks=[metrics,earlystopping],
+                    callbacks=[metrics, earlystopping],
                     verbose=1)
 
 results = model.evaluate(test_data, test_labels)
@@ -141,13 +142,13 @@ plt.legend()
 
 plt.show()
 
-plt.clf()   # clear figure
+plt.clf()  # clear figure
 acc_values = history_dict['acc']
 val_acc_values = history_dict['val_acc']
 
 plt.plot(epochs, acc, 'bo', label='Training acc')
 plt.plot(epochs, val_acc, color='red', marker='x', linestyle='dashed',
-            linewidth=0.5, markersize=5, label='Validation acc')
+         linewidth=0.5, markersize=5, label='Validation acc')
 plt.title('Training and validation accuracy')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')

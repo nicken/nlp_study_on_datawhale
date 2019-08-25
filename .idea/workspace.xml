@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="dea208f1-4afe-4a78-8a89-538a82b19aa9" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1/basic_text_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_1/basic_text_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1/basic_text_classificition_kesai.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_1/basic_text_classificition_kesai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_1/task-01.md" beforeDir="false" afterPath="$PROJECT_DIR$/task_1/task-01.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_2/info/nlp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/info/nlp/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-3_basic_distance_measurement_in_text_mining.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-3_basic_distance_measurement_in_text_mining.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-bag_of_words.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/info/nlp/sample/nlp-bag_of_words.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_3/fastext_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_3/fastext_case.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/task_7/transformer.ipynb">
-          <provider selected="true" editor-type-id="jupyter-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,6 +38,15 @@
       <find>mapper</find>
       <find>sqrt</find>
       <find>summary</find>
+      <find>seg</find>
+      <find>train_op_no_embedding</find>
+      <find>np.load</find>
+      <find>on_train_</find>
+      <find>on_train_ba</find>
+      <find>val_pre</find>
+      <find>self.model.predict</find>
+      <find>self.model.</find>
+      <find>self.validation_data</find>
     </findStrings>
     <replaceStrings>
       <replace>#</replace>
@@ -56,14 +64,17 @@
         <option value="$PROJECT_DIR$/task_3/mlp_tensorflow.py" />
         <option value="$PROJECT_DIR$/task_3/info/bn_exp/bn_exp/bn_train.py" />
         <option value="$PROJECT_DIR$/task_3/fasttext_case_1.ipynb" />
-        <option value="$PROJECT_DIR$/task_3/fastext_case.py" />
         <option value="$PROJECT_DIR$/task_3/fasttext_case_2.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/task_4/2-1.TextCNN/TextCNN-Tensor.py" />
         <option value="$PROJECT_DIR$/task_4/textcnn_case_2.py" />
-        <option value="$PROJECT_DIR$/task_4/textcnn_case_2_train.py" />
         <option value="$PROJECT_DIR$/task_4/info/NLP-Project-master/text_classifier/trainers/train.py" />
         <option value="$PROJECT_DIR$/task_4/textcnn_case_3.py" />
+        <option value="$PROJECT_DIR$/task_3/fastext_case.py" />
+        <option value="$PROJECT_DIR$/task_4/textcnn_case_2_train.py" />
+        <option value="$PROJECT_DIR$/../nlp_env/lib/python3.6/site-packages/tensorflow/python/keras/datasets/imdb.py" />
+        <option value="$PROJECT_DIR$/task_1/basic_text_classification.py" />
+        <option value="$PROJECT_DIR$/task_1/basic_text_classificition_kesai.py" />
       </list>
     </option>
   </component>
@@ -78,7 +89,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,12 +99,13 @@
             <path>
               <item name="nlp_task" type="b2602c69:ProjectViewProjectNode" />
               <item name="nlp_task" type="462c0819:PsiDirectoryNode" />
-              <item name="task_7" type="462c0819:PsiDirectoryNode" />
+              <item name="task_3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -121,58 +132,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="RunManager" selected="Python.bn_train">
-    <configuration name="bn_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="nlp_task" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_3/info/bn_exp/bn_exp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_3/info/bn_exp/bn_exp/bn_train.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mlp_tensorflow" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="nlp_task" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_3/mlp_tensorflow.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.bn_train" />
-        <item itemvalue="Python.mlp_tensorflow" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -203,17 +162,19 @@
       <workItem from="1565959673356" duration="145000" />
       <workItem from="1566308041728" duration="207000" />
       <workItem from="1566371296077" duration="16000" />
+      <workItem from="1566455739956" duration="4211000" />
+      <workItem from="1566698573190" duration="2763000" />
+      <workItem from="1566729654235" duration="2636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28255000" />
+    <option name="totallyTimeSpent" value="37865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1362661" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13519314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -224,17 +185,17 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="调试" order="11" weight="0.32939914" />
-      <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.03218884" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32939914" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="13" visible="true" weight="0.43240345" />
       <window_info anchor="bottom" id="Jupyter" order="14" weight="0.32939914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3299356" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -242,38 +203,20 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/nlp_task$textcnn_case_2_train.coverage" NAME="textcnn_case_2_train Coverage Results" MODIFIED="1566700791249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
     <SUITE FILE_PATH="coverage/nlp_task$cnews_group.coverage" NAME="cnews_group Coverage Results" MODIFIED="1565103686106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_1/text-classification-cnn-rnn-master/helper" />
     <SUITE FILE_PATH="coverage/nlp_task$bn_train.coverage" NAME="bn_train Coverage Results" MODIFIED="1565504653564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_3/info/bn_exp/bn_exp" />
     <SUITE FILE_PATH="coverage/nlp_task$run_and_test.coverage" NAME="run_and_test Coverage Results" MODIFIED="1565103055229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/nlp_task$nlp_task.coverage" NAME="nlp_task Coverage Results" MODIFIED="1565414854298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/nlp_task$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1565414980587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/nlp_task$mlp_tensorflow.coverage" NAME="mlp_tensorflow Coverage Results" MODIFIED="1565424979812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_3" />
+    <SUITE FILE_PATH="coverage/nlp_task$fastext_case.coverage" NAME="fastext_case Coverage Results" MODIFIED="1566456172402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/task_1/text-classification-cnn-rnn-master/helper/cnews_group.py" />
     <entry file="file://$PROJECT_DIR$/task_1/text-classification-cnn-rnn-master/cnn_model.py" />
     <entry file="file://$PROJECT_DIR$/task_1/text-classification-cnn-rnn-master/data/cnews_loader.py" />
     <entry file="file://$PROJECT_DIR$/task_1/text-classification-cnn-rnn-master/run_cnn.py" />
-    <entry file="file://$PROJECT_DIR$/task_1/cnews_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#7#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task_3/mlp_tensorflow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task_3/info/tensorflow_fasttext-master/process_input.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -329,41 +272,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task_3/fasttext_case_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task_3/fastext_case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="164" column="14" selection-start-line="164" selection-start-column="14" selection-end-line="164" selection-end-column="14" />
-          <folding>
-            <element signature="e#83#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task_4/2-1.TextCNN/TextCNN-Tensor.py" />
-    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_2_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_2_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2059">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task_4/info/NLP-Project-master/text_classifier/trainers/train.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -398,21 +307,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#341#427#0" />
-            <element signature="e#461#581#0" />
-            <element signature="e#1572#6769#0" />
-            <element signature="e#6856#7259#0" />
-            <element signature="e#7385#11501#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_3.py" />
     <entry file="file://$PROJECT_DIR$/task_4/textCNN.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
@@ -421,6 +316,129 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task_7/transformer.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_2_model.py" />
+    <entry file="file://$PROJECT_DIR$/task_4/textcnn_case_2_train.py" />
+    <entry file="file://$PROJECT_DIR$/task_4/TextCNN-Tensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#100#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nlp_env/lib/python3.6/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="261" selection-start-line="261" selection-end-line="261" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nlp_env/lib/python3.6/site-packages/numpy/lib/format.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="695" selection-start-line="695" selection-end-line="695" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nlp_env/lib/python3.6/site-packages/tensorflow/python/keras/datasets/imdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="90" column="28" lean-forward="true" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_1/md_images/1-2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nlp_env/lib/python3.6/site-packages/keras/callbacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5684">
+          <caret line="196" column="17" selection-start-line="196" selection-start-column="8" selection-end-line="196" selection-end-column="17" />
+          <folding>
+            <element signature="e#76#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nlp_env/lib/python3.6/site-packages/tensorflow/python/keras/callbacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1043">
+          <caret line="323" column="24" selection-start-line="323" selection-start-column="4" selection-end-line="323" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_1/basic_text_classificition_kesai.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="94" column="73" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="73" />
+          <folding>
+            <element signature="e#144#167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_1/cnews_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
+          <folding>
+            <element signature="e#7#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_1/basic_text_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+          <folding>
+            <element signature="e#8#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_2/task-02.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="261">
+            <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_3/mlp_tensorflow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_3/fastext_case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding>
+            <element signature="e#3922#5294#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task_3/fasttext_case_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1189">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#771#1540#0" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
