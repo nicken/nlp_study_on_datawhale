@@ -230,7 +230,7 @@ PS：莫烦PYTHON：https://morvanzhou.github.io/ 蛮多东西的(有框架(tens
 
 
 
-文献[5]：
+参考[5]：
 
 关于系统学习tensorflow的资源
 
@@ -518,7 +518,7 @@ P结尾表示‘积极的’(positive)，N结尾表示‘消极的’(negative)�
 * **准确率（Accuracy）**：所有的预测正确（正类负类）的占总的比重
 
 $$
-Accuracy= \frac{TP+FN}{TP+FP+FN+TN}
+Accuracy= \frac{TP+TN}{TP+FP+FN+TN}
 $$
 
 * **精确率（Precision）**：正确预测为正的占全部预测为正的比例
@@ -551,18 +551,20 @@ $$
 
   是一条曲线，由FPR和TPR的点连成。横轴是FPR，纵轴是TPR  ；
   $$
-  TPR=  \frac{TP}{TR+FN} \\
+  TPR=  \frac{TP}{TP+FN} \\
   FPR=  \frac{FP}{FP+TN}
   $$
-  TPR：所有实际‘正类’中，预测为正占的比例；
+  TPR：真正类率(True positive rate)，预测为正且实际为正的样本占所有正例样本的比例。
 
-  FPR：所有实际‘负类’中，预测为负占的比例。
+  FPR：伪正类率(False positive rate)，预测为正但实际为负的样本占所有负例样本的比例；
 
 
 
 * AUC：ROC曲线围成的面积 ，**即AUC**
 
   可以解读为：从所有正例中随机选取一个样本A，再从所有负例中随机选取一个样本B，分类器将A判为正例的概率比将B判为正例的概率大的可能性。可以看到位于随机线上方的点(如图中的A点)被认为好于随机猜测。在这样的点上TPR总大于FPR，意为正例被判为正例的概率大于负例被判为正例的概率。
+  
+  <img src="md_images/1-16.png"  width=700>
 
 <img src="md_images/1-14.png"  width=700>
 
@@ -570,7 +572,7 @@ ROC的优点[1]：
 
 1. 兼顾正例和负例的权衡。因为TPR聚焦于正例，FPR聚焦于与负例，使其成为一个比较均衡的评估方法。
 
-2. ROC曲线选用的两个指标，$TPR=  \frac{TP}{TR+FN}$,$FPR=  \frac{FP}{FP+TN}$，都不依赖于具体的类别分布。
+2. ROC曲线选用的两个指标，$TPR=  \frac{TP}{TP+FN}$,$FPR=  \frac{FP}{FP+TN}$，都不依赖于具体的类别分布。
 
    注意TPR用到的TP和FN同属P列，FPR用到的FP和TN同属N列，所以即使P或N的整体数量发生了改变，也不会影响到另一列。也就是说，即使正例与负例的比例发生了很大变化，ROC曲线也不会产生大的变化，而像Precision使用的TP和FP就分属两列，则易受类别分布改变的影响。
 
@@ -611,8 +613,8 @@ ROC的缺点[1]：
 > [3] 准确率&&精确率&&召回率&&ROC:https://segmentfault.com/a/1190000014829322
 >
 > [4]机器学习模型评估混淆矩阵、ROC曲线和AUC以及PR曲线https://blog.csdn.net/qq_27575895/article/details/81476871
-
-
+>
+> [5] [机器学习之类别不平衡问题 (2) —— ROC和PR曲线](https://www.cnblogs.com/massquantity/p/8592091.html)---参考[1]出处，会清晰点；这之中包含了代码实现。
 
 
 

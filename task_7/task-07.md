@@ -42,6 +42,22 @@
 
 
 
+部分细节的补充：
+
+> <img src="md_images/1-11.png" width=600>
+>
+> embedding在进入到Attention之前，有3个分叉，那表示说从1个向量，变成了3个向量Q,K,V，它是通过定义一个$W^Q$矩阵（这个矩阵随机初始化，通过前向反馈网络训练得到），将embedding和$W^Q$矩阵做乘法，得到查询向量q，假设输入embedding是512维，在上图中我们用4个小方格表示，输出的查询向量是64维，上图中用3个小方格以示不同。然后类似地，定义$W^K$和$W^V$矩阵，将embedding和$W^K$做矩阵乘法，得到键向量k；将embeding和$W^V$做矩阵乘法，得到值向量v。对每一个embedding做同样的操作，那么每个输入就得到了3个向量，查询向量，键向量和值向量。需要注意的是，查询向量和键向量要有相同的维度，值向量的维度可以相同，也可以不同，但一般也是相同的。
+>
+> 至于将获得的Q,K,V矩阵具体操作，总的来说，就是以下这幅图。
+>
+> <img src="md_images/1-12.png" width=600>
+>
+> ---参考[7]
+
+
+
+
+
 ### 1.4 关于`Feed Forword`
 
 <img src="md_images/1-7.png" width=600>
@@ -94,6 +110,8 @@ Decoder:
 > [5] [Transformer模型笔记](https://zhuanlan.zhihu.com/p/39034683)---含有pytorch代码
 >
 > [6] [Transformer原理和实现 从入门到精通](https://state-of-art.top/2019/01/17/Transformer%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/)---逐步代码解读
+>
+> [7] [浅谈Transformer 及Attention网络](https://blog.csdn.net/rosefun96/article/details/84930540)
 
 
 
